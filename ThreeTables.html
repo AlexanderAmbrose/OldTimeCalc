@@ -1,0 +1,62 @@
+<html>
+  <head>
+<link rel = "stylesheet" href="StylePage.css">
+    <script>
+    function Miles(){
+      var Start = document.getElementById("Start").value;
+      var End = document.getElementById("End").value;
+      Start = parseInt(Start)
+      End = parseInt(End)
+      var sol = "";
+      var Furlongs = 7.99998;
+      var result1 = 7.99998;
+      for (var i = Start; i <= End; i++)
+      {
+        sol = sol+ i + "  &nbsp&nbsp&nbsp&nbsp&nbsp  " + result1 + "<br>";
+        result1 = result1 + Furlongs;
+      }
+      document.getElementById("result").innerHTML = sol;
+    }
+
+    function Pounds(){
+      var Start = document.getElementById("Start").value;
+      var End = document.getElementById("End").value;
+      Start = parseInt(Start)
+      End = parseInt(End)
+      var sol = ""
+      var Pound = 32.174;
+      var result1 = 32.174;
+      for (var i = Start; i <= End; i++) {
+        sol = sol+ i + "  &nbsp&nbsp&nbsp&nbsp&nbsp  " + result1 + "<br>";
+        result1 = result1 + Pound;
+      }
+      document.getElementById("result").innerHTML = sol;
+    }
+    function Days(){
+      var Start = document.getElementById("Start").value;
+      var End = document.getElementById("End").value;
+      Start = parseInt(Start)
+      End = parseInt(End)
+      var day = 14;
+      var result1 = 14;
+      var sol = ""
+      for (var i = Start; i <= End; i++) {
+      sol = sol+ i + "  &nbsp&nbsp&nbsp&nbsp&nbsp  " + result1 + "<br>";
+        result1 = result1 + day;
+      }
+      document.getElementById("result").innerHTML = sol;
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1>Old Time Calculater</h1>
+    <input type="text" id = "Start"><br><br>
+    <input type="text" id = "End">
+    <br>
+    <input type="button" value="Miles to Furlongs" onclick="Miles()">
+    <input type="button" value="Slugs to Pounds" onclick="Pounds()">
+    <input type="button" value="Fortnights to Days" onclick="Days()">
+    <p id = "result"></p>
+  </body>
+</html>
